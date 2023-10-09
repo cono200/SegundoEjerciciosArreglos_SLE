@@ -59,21 +59,25 @@ namespace SegundoEjerciciosArreglos_SLE
         {
             int numero = 0;
             int[] Adivina = { 1, 2, 1, 3, 4 };
+            int[] aber = new int[Adivina.Length];
+           
             Console.WriteLine("Introducce el numero que quieres comprobar");
             numero = Convert.ToInt32(Console.ReadLine());
             for (int i = 0; i < Adivina.Length; i++)
             {
-
+               
 
                 if (Adivina[i] == numero)
                 {
-                    Console.WriteLine("El numero esta en la posicion " + i);
-                }
-                else
-                {
-                    Console.WriteLine("No esta en esta posicion y/o no existe el numero ");
+                   aber[1]= Adivina[i];
+                    
                 }
             }
+           
+          
+            Console.WriteLine("No ai" );
+
+            
         }
 
         public void TercerEjercicio()
@@ -127,27 +131,77 @@ namespace SegundoEjerciciosArreglos_SLE
              int longitud = Convert.ToInt32(Console.ReadLine());
           
             int[] numeros = new  int [longitud];
+            
 
             for (int i = 0; i < longitud; i++)
             {
-                Console.WriteLine("Ingresa los valores");
-                numeros[i]= Convert.ToInt32 (Console.ReadLine());
+                if (i < 1)
+                {
+                    Console.WriteLine("Introducce los numeros souuu", i++);
+                    numeros[i]= Convert.ToInt32(Console.ReadLine());
+                   
+                }              
 
+                else
+                {
+                    Console.WriteLine("Introducce los numeros x2", i++);
+                    numeros[i]= Convert.ToInt32(Console.ReadLine());   
+                    for (int j = 0; j < i; j++)
+                    {
+                        if (numeros[j] == numeros[i])
+                        {
+                            Console.WriteLine("No se puede repetir numeros karnal");
+                            i--;
+                            break;
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
+
+                }
                 
             }
 
-            for (int i = 0; i < numeros.Length; i++)
+
+            for (int k = 0; k < longitud; k++)
             {
-                int aber = numeros[i];
-                if (numeros[i] != aber)
+                Console.WriteLine("Los numeros son" + numeros[k]);
+            }
+
+            
+        }
+
+
+        public void QuintoEjercicio()
+        {
+            double aprobado = 0;
+            double reprobado = 0;
+            double cantidadAprobado = 0;
+            double cantidadReprobado = 0;
+            Console.WriteLine("Ingrese la cantidades de calificaciones que va a introduccir");
+            int cantidadCalificaciones = Convert.ToInt32 (Console.ReadLine());
+
+            int[] calificaciones = new int[cantidadCalificaciones];
+
+
+            for (int i = 0; i < cantidadCalificaciones; i++)
+            {
+                Console.WriteLine("Ingrese las calificaciones para promediar", i+1);
+                calificaciones[i]= Convert.ToInt32(Console.ReadLine());
+            }
+
+
+            for (int i = 0; i < cantidadCalificaciones; i++)
+            {
+                if (calificaciones[i] >= 0 && calificaciones[i] <= 6)
                 {
-                    Console.WriteLine("aaaa " + numeros[i]);
+
                 }
             }
 
 
-
-            
         }
 
 

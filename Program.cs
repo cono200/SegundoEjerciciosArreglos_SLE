@@ -8,13 +8,14 @@
 
 
             // arreglos1.PrimerEjercicio();
-            //arreglos1.SegundoEjercicio();
+            //    arreglos1.SegundoEjercicio();
 
             //  arreglos1.TercerEjercicio();
 
 
-            arreglos1.CuatroEjercicio();
+            //arreglos1.CuatroEjercicio();
 
+            arreglos1.QuintoEjercicio();
         }
     }
 }
